@@ -1,5 +1,10 @@
-FROM node:13.8.0-stretch-slim
+#FROM node:13.8.0-stretch-slim
 
-RUN npm install -g homebridge homebridge-nest
+#RUN apt-get update ; apt-get install -y python ; apt-get clean
+#RUN npm install -g --unsafe-perm homebridge homebridge-nest homebridge-config-ui-x
 
-ENTRYPOINT ["homebridge"]
+#ENTRYPOINT ["homebridge"]
+
+FROM oznu/homebridge
+
+RUN npm install -g homebridge-nest
